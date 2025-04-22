@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости дома</title>
+  <link rel="stylesheet" href="css/calcuate.css">
+</head>
+<body>
+<div class="calculator">
+  <div id="step1" class="step active">
+    <h2>Выберите тип дома для постройки</h2>
+    <div class="options">
+      <div class="option group-opt" data-value="block">
+        <img src="images/dom_block.jpg" alt="">
+        <span>Дом из блоков</span>
+      </div>
+      <div class="option group-opt" data-value="profiled-timber">
+        <img src="images/dom_prof_brus.jpg" alt="">
+        <span>Дом из профилированного бруса</span>
+      </div>
+      <div class="option group-opt" data-value="rounded-log">
+        <img src="images/dom_ocilidr_brus.jpg" alt="">
+        <span>Дом из оцилиндрованного бревна</span>
+      </div>
+      <div class="option group-opt" data-value="frame">
+        <img src="images/dom_karkas.jpg" alt="">
+        <span>Каркасный дом</span>
+      </div>
+      <div class="option group-opt" data-value="sip">
+        <img src="images/dom_sip.jpg" alt="">
+        <span>Дом из SIP панелей</span>
+      </div>
+      <div class="option group-opt" data-value="brick">
+        <img src="images/dom_kirp.jpg" alt="">
+        <span>Дом из кирпича</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="step2" class="step">
+    <h2>Выберите количество этажей</h2>
+    <div class="options">
+      <div class="option" data-value="1">1 этаж</div>
+      <div class="option" data-value="1+m">1 этаж + мансарда</div>
+      <div class="option" data-value="2">2 этажа</div>
+      <div class="option" data-value="2+m">2 этажа + мансарда</div>
+      <div class="option" data-value="3">3 этажа</div>
+      <div class="option" data-value="3+m">3 этажа + мансарда</div>
+    </div>
+  </div>
+
+  <div id="step3" class="step">
+    <h2>У вас есть участок?</h2>
+    <div class="options">
+      <div class="option" data-value="city">Участок есть, в черте города</div>
+      <div class="option" data-value="suburb-100">Участок есть, за городом до 100 км</div>
+      <div class="option" data-value="suburb-100+">Участок есть, за городом далее 100 км</div>
+      <div class="option" data-value="no">Участка нет</div>
+    </div>
+  </div>
+
+  <div id="step4" class="step">
+    <h2>Выберите размер дома</h2>
+    <div class="options">
+      <div class="option" data-value="<100">До 100 кв.м.</div>
+      <div class="option" data-value="100-150">До 100 - 150 кв.м.</div>
+      <div class="option" data-value="150-200">До 150 - 200 кв.м.</div>
+      <div class="option" data-value=">200">Более 200 кв.м.</div>
+    </div>
+  </div>
+
+  <div id="step5" class="step">
+    <h2>Когда планируется строительство?</h2>
+    <div class="options">
+      <div class="option" data-value="soon">В ближайшее время</div>
+      <div class="option" data-value="this-year">В этом году</div>
+      <div class="option" data-value="next-year">В следующем году</div>
+      <div class="option" data-value="undefined">Еще не определились</div>
+    </div>
+  </div>
+
+  <div id="step6" class="step">
+    <h2>Расчет стоимости за минуту</h2>
+    <p>Оставьте свои контактные данные, и мы отправим вам расчет стоимости</p>
+
+    <div class="form-group">
+      <label for="name">Имя</label>
+      <input type="text" id="name" placeholder="Введите ваше имя" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Введите ваш email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" placeholder="Введите ваш телефон" required>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <button class="back-btn">Назад</button>
+
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress" id="progress-bar"></div>
+      </div>
+      <div class="progress-text" id="progress-text">0% завершено</div>
+    </div>
+
+    <button class="next-btn">Далее</button>
+  </div>
+</div>
+
+<script src="js/calculate.js"></script>
+</body>
+</html>
